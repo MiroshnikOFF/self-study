@@ -1,0 +1,202 @@
+[
+  {
+    "model": "study.question",
+    "pk": 26,
+    "fields": {
+      "question": "Что будет показано в результате?\r\n\r\nname = \"John\"\r\nprint('Hi, %s' % name)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 27,
+    "fields": {
+      "question": "Как получить данные от пользователя?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 28,
+    "fields": {
+      "question": "Где правильно создана переменная?\r\n* Мы спрашиваем про вариант ответа, который не выдаст ошибку при запуске проекта",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 29,
+    "fields": {
+      "question": "Какие ошибки допущены в коде ниже?\r\n\r\ndef factorial(n):\r\n  if n == 0:\r\n    return 1\r\n  else:\r\n    return n * factorial(n - 1)\r\nprint(factorial(5))",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 30,
+    "fields": {
+      "question": "Что покажет этот код?\r\n\r\nfor j in 'Hi! I\\'m mister Robert':\r\n\tif j == '\\'':\r\n\t  print(\"Найдено\")\r\n\t  break\r\nelse:\r\n\tprint (\"Готово\")",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 31,
+    "fields": {
+      "question": "Сколько библиотек можно импортировать в один проект?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 32,
+    "fields": {
+      "question": "Какая функция выводит что-либо в консоль?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 33,
+    "fields": {
+      "question": "Что покажет этот код?\r\n\r\nfor i in range(5):\r\n  if i % 2 == 0:\r\n    continue\r\n  print(i)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 34,
+    "fields": {
+      "question": "Какая библиотека отвечает за время?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 35,
+    "fields": {
+      "question": "Что будет результатом этого кода?\r\n\r\nx = 23\r\nnum = 0 if x > 10 else 11\r\nprint(num)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 38,
+    "fields": {
+      "question": "Имеется кортеж вида T = (4, 2, 3). Какая из операций приведёт к тому, что имя T будет ссылаться на кортеж (1, 2, 3)?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 39,
+    "fields": {
+      "question": "Для чего в Python используется встроенная функция enumerate()?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 40,
+    "fields": {
+      "question": "Что выведет интерпретатор для следующей программы (версия Python 3.6+)?\r\n\r\ndef get_name_and_decades(name, age):\r\n    print(f\"My name is {name} and I'm {age / 10:.5f} decades old.\")\r\n\r\nget_name_and_decades(\"Leo\", 31)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 41,
+    "fields": {
+      "question": "Необходимо собрать и вывести все уникальные слова из строки рекламного текста. Какой из перечисленных типов данных Python подходит лучше всего?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 42,
+    "fields": {
+      "question": "Учёт зверей в зоопарке ведётся с помощью приведённого ниже списка словарей. Какая из строчек кода выведет структуру, отсортированную в порядке увеличения возрастов животных?\r\n\r\nanimals = [\r\n    {'type': 'penguin', 'name': 'Stephanie', 'age': 8},\r\n    {'type': 'elephant', 'name': 'Devon', 'age': 3},\r\n    {'type': 'puma', 'name': 'Moe', 'age': 5},\r\n]",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 43,
+    "fields": {
+      "question": "Какой результат выведет следующий код?\r\n\r\ndef f(a, *pargs, **kargs): print(a, pargs, kargs)\r\nf(1, 2, 3, x=4, y=5)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 44,
+    "fields": {
+      "question": "Как вывести список методов и атрибутов объекта x?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 45,
+    "fields": {
+      "question": "Как можно более кратко представить следующую запись?\r\n\r\nif X:\r\n    A = Y\r\nelse:\r\n    A = Z",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 46,
+    "fields": {
+      "question": "Какая из перечисленных инструкций выполнится быстрее всего, если n = 10**6?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 47,
+    "fields": {
+      "question": "Вопрос со звёздочкой. Что выведет на экран следующий код?\r\n\r\na, *b, c = [1, 2]\r\nprint(a, b, c)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 48,
+    "fields": {
+      "question": "С помощью Python нужно записать данные в файл, но только в том случае, если файла ещё нет. Какой режим указать в инструкции open()?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 49,
+    "fields": {
+      "question": "Для чего в пакетах модулей python в файле __init__.py служит список __all__?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 50,
+    "fields": {
+      "question": "При объявлении класса с помощью оператора class что пишется в круглых скобках после имени класса?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 51,
+    "fields": {
+      "question": "Какую роль в описании метода класса выполняет декоратор @property?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 52,
+    "fields": {
+      "question": "Что выведет следующий код?\r\n\r\ntry:\r\n    raise IndexError\r\nexcept IndexError:\r\n    print('Получено исключение.')\r\nelse:\r\n    print('Но в этом нет ничего страшного.')",
+      "test": 5
+    }
+  }
+]
