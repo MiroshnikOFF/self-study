@@ -1,0 +1,35 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <h2 style="margin: 30px; text-align: center; color: blue">Статистика</h2>
+    <div class="row" style="margin: 30px">
+        <form method="get">
+            {{ filter.form.as_p }}
+            <button type="submit" class="btn btn-primary">Применить фильтр</button>
+        </form>
+    </div>
+    <table class="table">
+        <thead style="text-align: center">
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">ID студента</th>
+            <th scope="col">email студента</th>
+            <th scope="col">Количество пройденных тестов</th>
+            <th scope="col">Доля правильных ответов в тестах</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in context %}
+            <tr style="text-align: center">
+                <th scope="row">{{ forloop.counter }}</th>
+                <td style="text-align: center">{{ object.user_pk }}</td>
+                <td>
+                    <a href="{% url 'users:user' object.user_pk %}">{{ object.user_email }}</a>
+                </td>
+                <td>{{ object.test_count }}</td>
+                <td>{{ object.correct_answers_percentage }}%</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <form method="post" class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Редактирование вопроса
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-outline-success">Сохранить</button>
+                    <a class="btn btn-outline-primary" href="{% url 'study:test_update' object.test.pk %}">Отмена</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Вопросы
+                </div>
+                <div class="card-body">
+                    {{ formset.management_form }}
+                    {% for form in formset.forms %}
+                        {{ form.as_p }}
+                        {% if not forloop.last %}
+                            <hr>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

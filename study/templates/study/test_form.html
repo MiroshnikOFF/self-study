@@ -1,0 +1,52 @@
+{% extends 'study/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        {% if object %}
+                            Редактирование теста
+                        {% else %}
+                            Добавление теста
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        {% if object %}
+                            <button type="submit" class="btn btn-outline-success">Сохранить</button>
+                            <a class="btn btn-outline-primary" href="{% url 'study:test' object.pk %}">Отмена</a>
+                        {% else %}
+                            <button type="submit" class="btn btn-outline-success">Добавить</button>
+                            <a class="btn btn-outline-primary" href="{% url 'study:tests' %}">Отмена</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if object %}
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Редактирование вопросов
+                        </div>
+                        <div class="card-body">
+                            {{ formset.management_form }}
+                            {% for form in formset.forms %}
+                                {{ form.as_p }}
+                                {% if not forloop.last %}
+                                    <a class="btn btn-outline-primary" style="margin-top: 30px"
+                                       href="{% question_path object.pk questions_pk forloop.counter0 %}">Редактировать
+                                        ответы</a>
+                                    <hr>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}

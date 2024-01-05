@@ -1,0 +1,39 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <h2 style="margin: 30px; color: blue; text-align: center">Уроки</h2>
+    <div class="col12 mb-5">
+        {% if perms.add.lesson %}
+            <a class="p-2 btn btn-outline-success" style="margin-left: 30px" href="{% url 'study:lesson_create' %}">Добавить
+                урок</a>
+        {% endif %}
+        <div class="row" style="margin: 30px">
+            <form method="get">
+                {{ filter.form.as_p }}
+                <button type="submit" class="btn btn-primary">Применить фильтр</button>
+            </form>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Название</th>
+            <th scope="col">Раздел</th>
+            <th scope="col">Автор</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in object_list %}
+            <tr>
+                <th scope="row">{{ object.pk }}</th>
+                <td>
+                    <a href="{% url 'study:lesson' object.pk %}"><h4>{{ object.name }}</h4></a>
+                </td>
+                <td>{{ object.section }}</td>
+                <td>{{ object.author }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

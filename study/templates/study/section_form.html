@@ -1,0 +1,28 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    {% if object %}
+                        Редактирование раздела
+                    {% else %}
+                        Добавление раздела
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {% if object %}
+                        <button type="submit" class="btn btn-outline-success">Сохранить</button>
+                        <a class="btn btn-outline-warning" href="{% url 'study:section' object.pk %}">Отмена</a>
+                    {% else %}
+                        <button type="submit" class="btn btn-outline-success">Добавить</button>
+                        <a class="btn btn-outline-warning" href="{% url 'study:sections' %}">Отмена</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
