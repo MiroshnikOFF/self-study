@@ -1,0 +1,51 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <main>
+        <div class="container py-5">
+            <h1 class="display-5 fw-bold" style="text-align: center">
+                Вы ответили верно на {{ correct_answers_count }} из {{ answers_count }} вопросов.
+            </h1>
+            {% if correct_answers_count == answers_count %}
+                <h1 style="color: red; text-align: center">
+                    Так держать !!!
+                </h1>
+            {% endif %}
+            <div class="row" style="margin-top: 50px">
+                <div class="col-6" style="background-color: rgba(0,128,0,0.48)">
+                    <h3>Верный ответ</h3>
+                </div>
+                <div class="col-6" style="background-color: rgba(255,0,0,0.62)">
+                    <h3>Неверный ответ</h3>
+                </div>
+            </div>
+            {% for item in questions_with_correct_answer %}
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <pre>{{ item.0 }}</pre>
+                            </div>
+                            {% if item.2 %}
+                                <div class="card-footer" style="background-color: rgba(0,128,0,0.48)">
+                                    <p>{{ item.1 }}</p>
+                                </div>
+                            {% else %}
+                                <div class="card-footer" style="background-color: rgba(255,0,0,0.62)">
+                                    <p>{{ item.1 }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% if correct_answers_count != answers_count %}
+                <a class="btn btn-success btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:testing' test_pk 1 %}">Пройти тест снова</a>
+            {% endif %}
+            <a class="btn btn-primary btn-lg" type="button" style="margin-top: 30px"
+               href="{% url 'study:lesson' lesson_pk %}">Закрыть</a>
+        </div>
+    </main>
+{% endblock %}

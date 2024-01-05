@@ -1,0 +1,25 @@
+{% extends 'study/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+    <main>
+        <div class="container py-4" style="background-color: rgba(117,183,152,0.69)">
+            <pre>{{ question.question }}</pre>
+            <form method="post">
+                {% csrf_token %}
+                {% for answer in answers %}
+                    <div class="form-check" style="padding-left: 30px">
+                        <label>
+                            <input type="radio" style="padding-right: 30px" name="{{ question.pk }}"
+                                   value="{{ answer.pk }}">{{ answer.answer }}
+                        </label>
+                    </div>
+                {% endfor %}
+                {% if required %}
+                    <h4 style="color: red; margin-top: 30px">Необходимо выбрать один из ответов</h4>
+                {% endif %}
+                <button type="submit" class="btn btn-primary" style="margin-top: 30px">Следующий вопрос</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'study/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+    <main>
+        <div class="container py-4">
+            {% if object.preview %}
+                <img src="{% media_path object.preview %}" width="600" alt="Упс!">
+            {% endif %}
+            <h1 class="display-5 fw-bold">{{ object.name }}</h1>
+            <p class="col-md-8 fs-4">{{ object.content }}</p>
+            {% if object.video_url %}
+                <p class="col-md-8 fs-4">{{ object.video_url }}</p>
+            {% endif %}
+            <h2>Тесты</h2>
+            {% for test in tests %}
+                <li>
+                    <a href="{% url 'study:test' test.pk %}">{{ forloop.counter }}. {{ test.name }}</a>
+                </li>
+            {% endfor %}
+            <p></p>
+            <a class="btn btn-primary btn-lg" type="button" style="margin-top: 30px"
+               href="{% url 'study:lessons' %}">Закрыть</a>
+            {% if perms.change.lesson %}
+                <a class="btn btn-warning btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:lesson_update' object.pk %}">Редактировать</a>
+            {% endif %}
+            {% if perms.delete.lesson %}
+                <a class="btn btn-danger btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:lesson_delete' object.pk %}">Удалить</a>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}

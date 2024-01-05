@@ -1,0 +1,29 @@
+{% extends 'study/base.html' %}
+
+{% block content %}
+    <main>
+        <div class="container py-5">
+            <h1 class="display-5 fw-bold">{{ object.name }}</h1>
+            <p class="col-md-8 fs-4">{{ object.description }}</p>
+            <p>
+                <a class="btn btn-success btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:testing' object.pk 1 %}">Пройти тест</a>
+            </p>
+            {% if user.is_staff %}
+                <a class="btn btn-primary btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:tests' %}">Закрыть</a>
+            {% else %}
+                <a class="btn btn-primary btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:lesson' object.lesson.pk %}">Закрыть</a>
+            {% endif %}
+            {% if perms.change.test %}
+                <a class="btn btn-warning btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:test_update' object.pk %}">Редактировать</a>
+            {% endif %}
+            {% if perms.delete.test %}
+                <a class="btn btn-danger btn-lg" type="button" style="margin-top: 30px"
+                   href="{% url 'study:test_delete' object.pk %}">Удалить</a>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}
