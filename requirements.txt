@@ -1,0 +1,15 @@
+celery
+Django==4.2.8
+django-cors-headers
+django-extensions
+django-filter
+djangorestframework
+djangorestframework-simplejwt
+drf-yasg
+ipython
+Pillow
+psycopg2-binary
+python-dotenv
+redis
+setuptools
+
