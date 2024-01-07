@@ -28,9 +28,6 @@ schema_view = get_schema_view(
         title="API Documentation",
         default_version='v1',
         description="Self study",
-        # terms_of_service="https://www.example.com/policies/terms/",
-        # contact=openapi.Contact(email="contact@example.com"),
-        # license=openapi.License(name="BSD License"),
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
@@ -39,9 +36,9 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls.ssr_urls', namespace='users')),
-    path('study/', include('study.urls.ssr_urls', namespace='study')),
+    path('', include('study.urls.ssr_urls', namespace='study')),
     path('api/v1/users/', include('users.urls.api_urls', namespace='users api')),
-    path('api/v1/study/', include('study.urls.api_urls', namespace='study api')),
+    path('api/v1/', include('study.urls.api_urls', namespace='study api')),
 
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
