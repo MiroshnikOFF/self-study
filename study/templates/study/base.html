@@ -67,6 +67,15 @@
 {% block content %}
 {% endblock %}
 
+<div class="list-footer-display">
+    <div class="row" style="margin: 30px">
+        <p style="color: grey">API документация</p>
+        <ul>
+            <li><a href="{% url 'schema-swagger-ui' %}">Swagger</a></li>
+            <li><a href="{% url 'schema-redoc' %}">Redocly</a></li>
+        </ul>
+    </div>
+</div>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
