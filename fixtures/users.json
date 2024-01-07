@@ -1,0 +1,65 @@
+[
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$MXsSsqGwqjm09XPbR1IaHp$K+3nfVUyCQmg54dow6ZN6K1ezB334kt1vaOXtt7sZ5Y=",
+      "last_login": "2024-01-05T18:29:51.777Z",
+      "is_superuser": false,
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-12-29T21:23:22Z",
+      "email": "taxi83080@yandex.ru",
+      "phone": "+7(988)311-68-49",
+      "avatar": "users/151301913437151.png",
+      "key": "453659452095",
+      "is_verified": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bC83SACg8ymNnP9dKMo9nT$78wtLI3Muwgqn953xhHB9x3mvivnY68ihZeLwTFp7LA=",
+      "last_login": "2024-01-05T21:57:34.151Z",
+      "is_superuser": true,
+      "first_name": "Админ",
+      "last_name": "Админов",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-03T12:02:07Z",
+      "email": "admin@sky.pro",
+      "phone": "+7 988 311-68-49",
+      "avatar": "users/Немецкая-овчарка-1.jpg",
+      "key": null,
+      "is_verified": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$WfwHvZuQKqJAloIInUNt1m$AyPTiEEo+kFwlxDW+GudyKGiSwz8lJcqWYlkPXt3o7U=",
+      "last_login": "2024-01-05T18:32:12.802Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-05T18:31:40.386Z",
+      "email": "taxi8308@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "key": "627395430152",
+      "is_verified": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

@@ -1,0 +1,1480 @@
+[
+  {
+    "model": "study.section",
+    "pk": 4,
+    "fields": {
+      "name": "Python",
+      "description": "Python — это язык программирования, который широко используется в интернет-приложениях, разработке программного обеспечения, науке о данных и машинном обучении (ML). Разработчики используют Python, потому что он эффективен, прост в изучении и работает на разных платформах. Программы на языке Python можно скачать бесплатно, они совместимы со всеми типами систем и повышают скорость разработки.",
+      "preview": "study/python.jpeg",
+      "created": "2024-01-03T13:20:29.753Z"
+    }
+  },
+  {
+    "model": "study.section",
+    "pk": 5,
+    "fields": {
+      "name": "Java",
+      "description": "Java – широко используемый язык программирования для написания интернет-приложений. Язык Java широко использовался на протяжении более двух десятилетий. Миллионы приложений Java используются и сегодня. Java – это многоплатформенный, объектно-ориентированный и сетецентрический язык, который сам по себе может использоваться как платформа. Это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.",
+      "preview": "study/java.jpg",
+      "created": "2024-01-03T13:21:50.894Z"
+    }
+  },
+  {
+    "model": "study.lesson",
+    "pk": 7,
+    "fields": {
+      "name": "Синтаксис",
+      "content": "Синтаксис Python — это набор правил и структур языка программирования Python, которые определяют правильный формат написания кода",
+      "section": 4,
+      "preview": "study/sintaxis_python.jpg",
+      "video_url": null,
+      "author": 3
+    }
+  },
+  {
+    "model": "study.lesson",
+    "pk": 8,
+    "fields": {
+      "name": "Django",
+      "content": "Django (/ˈdʒæŋɡoʊ/ джанго) — бесплатный и свободный фреймворк для веб-приложений, написанный на Python. Фреймворк — это набор компонентов, которые помогают разрабатывать веб-сайты быстро и просто.\r\n\r\nКаждый раз при разработке веб-сайтов требуются похожие компоненты: способ аутентифицировать пользователей (вход, выход, регистрация), панель управления сайтом, формы, инструменты для загрузки файлов и т. д.\r\n\r\nК счастью для нас, другие люди обратили внимание на возникновение однотипных проблем при веб-разработке, так что они объединились и создали фреймворки (Django и другие), которые предлагают нам готовые шаблоны для использования.\r\n\r\nФреймворки существуют, чтобы облегчить процесс разработки и позволить нам не изобретать колесо.",
+      "section": 4,
+      "preview": "study/django.png",
+      "video_url": null,
+      "author": 3
+    }
+  },
+  {
+    "model": "study.test",
+    "pk": 4,
+    "fields": {
+      "name": "Тест на знание основ Python",
+      "description": "Здесь вы можете пройти тест с уровнем «Начальный» на тему Python. На тест выделяется небольшой промежуток времени, а также после окончания теста вы сможете просмотреть результаты и ознакомиться с верными и неверными ответами.",
+      "lesson": 7
+    }
+  },
+  {
+    "model": "study.test",
+    "pk": 5,
+    "fields": {
+      "name": "Продвинутый синтаксис",
+      "description": "Пришло время узнать, как хорошо вы разбираетесь в Python. Проверьте свои знания в нашем тесте из 15 вопросов по различным аспектам языка. Сможете правильно ответить на все вопросы?",
+      "lesson": 7
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 26,
+    "fields": {
+      "question": "Что будет показано в результате?\r\n\r\nname = \"John\"\r\nprint('Hi, %s' % name)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 27,
+    "fields": {
+      "question": "Как получить данные от пользователя?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 28,
+    "fields": {
+      "question": "Где правильно создана переменная?\r\n* Мы спрашиваем про вариант ответа, который не выдаст ошибку при запуске проекта",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 29,
+    "fields": {
+      "question": "Какие ошибки допущены в коде ниже?\r\n\r\ndef factorial(n):\r\n  if n == 0:\r\n    return 1\r\n  else:\r\n    return n * factorial(n - 1)\r\nprint(factorial(5))",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 30,
+    "fields": {
+      "question": "Что покажет этот код?\r\n\r\nfor j in 'Hi! I\\'m mister Robert':\r\n\tif j == '\\'':\r\n\t  print(\"Найдено\")\r\n\t  break\r\nelse:\r\n\tprint (\"Готово\")",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 31,
+    "fields": {
+      "question": "Сколько библиотек можно импортировать в один проект?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 32,
+    "fields": {
+      "question": "Какая функция выводит что-либо в консоль?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 33,
+    "fields": {
+      "question": "Что покажет этот код?\r\n\r\nfor i in range(5):\r\n  if i % 2 == 0:\r\n    continue\r\n  print(i)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 34,
+    "fields": {
+      "question": "Какая библиотека отвечает за время?",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 35,
+    "fields": {
+      "question": "Что будет результатом этого кода?\r\n\r\nx = 23\r\nnum = 0 if x > 10 else 11\r\nprint(num)",
+      "test": 4
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 38,
+    "fields": {
+      "question": "Имеется кортеж вида T = (4, 2, 3). Какая из операций приведёт к тому, что имя T будет ссылаться на кортеж (1, 2, 3)?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 39,
+    "fields": {
+      "question": "Для чего в Python используется встроенная функция enumerate()?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 40,
+    "fields": {
+      "question": "Что выведет интерпретатор для следующей программы (версия Python 3.6+)?\r\n\r\ndef get_name_and_decades(name, age):\r\n    print(f\"My name is {name} and I'm {age / 10:.5f} decades old.\")\r\n\r\nget_name_and_decades(\"Leo\", 31)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 41,
+    "fields": {
+      "question": "Необходимо собрать и вывести все уникальные слова из строки рекламного текста. Какой из перечисленных типов данных Python подходит лучше всего?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 42,
+    "fields": {
+      "question": "Учёт зверей в зоопарке ведётся с помощью приведённого ниже списка словарей. Какая из строчек кода выведет структуру, отсортированную в порядке увеличения возрастов животных?\r\n\r\nanimals = [\r\n    {'type': 'penguin', 'name': 'Stephanie', 'age': 8},\r\n    {'type': 'elephant', 'name': 'Devon', 'age': 3},\r\n    {'type': 'puma', 'name': 'Moe', 'age': 5},\r\n]",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 43,
+    "fields": {
+      "question": "Какой результат выведет следующий код?\r\n\r\ndef f(a, *pargs, **kargs): print(a, pargs, kargs)\r\nf(1, 2, 3, x=4, y=5)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 44,
+    "fields": {
+      "question": "Как вывести список методов и атрибутов объекта x?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 45,
+    "fields": {
+      "question": "Как можно более кратко представить следующую запись?\r\n\r\nif X:\r\n    A = Y\r\nelse:\r\n    A = Z",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 46,
+    "fields": {
+      "question": "Какая из перечисленных инструкций выполнится быстрее всего, если n = 10**6?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 47,
+    "fields": {
+      "question": "Вопрос со звёздочкой. Что выведет на экран следующий код?\r\n\r\na, *b, c = [1, 2]\r\nprint(a, b, c)",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 48,
+    "fields": {
+      "question": "С помощью Python нужно записать данные в файл, но только в том случае, если файла ещё нет. Какой режим указать в инструкции open()?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 49,
+    "fields": {
+      "question": "Для чего в пакетах модулей python в файле __init__.py служит список __all__?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 50,
+    "fields": {
+      "question": "При объявлении класса с помощью оператора class что пишется в круглых скобках после имени класса?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 51,
+    "fields": {
+      "question": "Какую роль в описании метода класса выполняет декоратор @property?",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.question",
+    "pk": 52,
+    "fields": {
+      "question": "Что выведет следующий код?\r\n\r\ntry:\r\n    raise IndexError\r\nexcept IndexError:\r\n    print('Получено исключение.')\r\nelse:\r\n    print('Но в этом нет ничего страшного.')",
+      "test": 5
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 104,
+    "fields": {
+      "answer": "\"Hi, name\"",
+      "is_correct": false,
+      "question": 26
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 105,
+    "fields": {
+      "answer": "\"Hi, \"",
+      "is_correct": false,
+      "question": 26
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 106,
+    "fields": {
+      "answer": "Ошибка",
+      "is_correct": false,
+      "question": 26
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 107,
+    "fields": {
+      "answer": "\"Hi, John\"",
+      "is_correct": true,
+      "question": 26
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 108,
+    "fields": {
+      "answer": "Использовать метод get()",
+      "is_correct": false,
+      "question": 27
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 109,
+    "fields": {
+      "answer": "Использовать метод cin()",
+      "is_correct": false,
+      "question": 27
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 110,
+    "fields": {
+      "answer": "Использовать метод read()",
+      "is_correct": false,
+      "question": 27
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 111,
+    "fields": {
+      "answer": "Использовать метод readLine()",
+      "is_correct": false,
+      "question": 27
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 112,
+    "fields": {
+      "answer": "Использовать метод input()",
+      "is_correct": true,
+      "question": 27
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 113,
+    "fields": {
+      "answer": "int num = 2",
+      "is_correct": false,
+      "question": 28
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 114,
+    "fields": {
+      "answer": "Нет подходящего варианта",
+      "is_correct": false,
+      "question": 28
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 115,
+    "fields": {
+      "answer": "var num = 2",
+      "is_correct": false,
+      "question": 28
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 116,
+    "fields": {
+      "answer": "$num = 2",
+      "is_correct": false,
+      "question": 28
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 117,
+    "fields": {
+      "answer": "num = float(2)",
+      "is_correct": true,
+      "question": 28
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 118,
+    "fields": {
+      "answer": "Функция не может вызывать сама себя",
+      "is_correct": false,
+      "question": 29
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 119,
+    "fields": {
+      "answer": "Необходимо указать тип возвращаемого значения",
+      "is_correct": false,
+      "question": 29
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 120,
+    "fields": {
+      "answer": "Функция всегда будет возвращать 1",
+      "is_correct": false,
+      "question": 29
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 121,
+    "fields": {
+      "answer": "В коде нет никаких ошибок",
+      "is_correct": true,
+      "question": 29
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 122,
+    "fields": {
+      "answer": "Ошибку в коде",
+      "is_correct": false,
+      "question": 30
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 123,
+    "fields": {
+      "answer": "\"Найдено\" и \"Готово\"",
+      "is_correct": false,
+      "question": 30
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 124,
+    "fields": {
+      "answer": "\"Готово\"",
+      "is_correct": false,
+      "question": 30
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 125,
+    "fields": {
+      "answer": "\"Найдено\"",
+      "is_correct": true,
+      "question": 30
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 126,
+    "fields": {
+      "answer": "Не более 3",
+      "is_correct": false,
+      "question": 31
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 127,
+    "fields": {
+      "answer": "Не более 10",
+      "is_correct": false,
+      "question": 31
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 128,
+    "fields": {
+      "answer": "Не более 5",
+      "is_correct": false,
+      "question": 31
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 129,
+    "fields": {
+      "answer": "Не более 23",
+      "is_correct": false,
+      "question": 31
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 130,
+    "fields": {
+      "answer": "Неограниченное количество",
+      "is_correct": true,
+      "question": 31
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 131,
+    "fields": {
+      "answer": "write();",
+      "is_correct": false,
+      "question": 32
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 132,
+    "fields": {
+      "answer": "log();",
+      "is_correct": false,
+      "question": 32
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 133,
+    "fields": {
+      "answer": "out();",
+      "is_correct": false,
+      "question": 32
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 134,
+    "fields": {
+      "answer": "print();",
+      "is_correct": true,
+      "question": 32
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 135,
+    "fields": {
+      "answer": "Ошибку, так как i не присвоена",
+      "is_correct": false,
+      "question": 33
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 136,
+    "fields": {
+      "answer": "Ошибку из-за неверного вывода",
+      "is_correct": false,
+      "question": 33
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 137,
+    "fields": {
+      "answer": "Числа: 1, 3 и 5",
+      "is_correct": false,
+      "question": 33
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 138,
+    "fields": {
+      "answer": "Числа: 0, 2 и 4",
+      "is_correct": false,
+      "question": 33
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 139,
+    "fields": {
+      "answer": "Числа: 1 и 3",
+      "is_correct": true,
+      "question": 33
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 140,
+    "fields": {
+      "answer": "localtime",
+      "is_correct": false,
+      "question": 34
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 141,
+    "fields": {
+      "answer": "clock",
+      "is_correct": false,
+      "question": 34
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 142,
+    "fields": {
+      "answer": "Time",
+      "is_correct": false,
+      "question": 34
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 143,
+    "fields": {
+      "answer": "time",
+      "is_correct": true,
+      "question": 34
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 144,
+    "fields": {
+      "answer": "23",
+      "is_correct": false,
+      "question": 35
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 145,
+    "fields": {
+      "answer": "10",
+      "is_correct": false,
+      "question": 35
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 146,
+    "fields": {
+      "answer": "11",
+      "is_correct": false,
+      "question": 35
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 147,
+    "fields": {
+      "answer": "Ошибка",
+      "is_correct": false,
+      "question": 35
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 148,
+    "fields": {
+      "answer": "0",
+      "is_correct": true,
+      "question": 35
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 149,
+    "fields": {
+      "answer": "T[0] = 1",
+      "is_correct": false,
+      "question": 38
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 150,
+    "fields": {
+      "answer": "T = (1) + T[1:]",
+      "is_correct": false,
+      "question": 38
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 151,
+    "fields": {
+      "answer": "T = (1,) + T[1:]",
+      "is_correct": true,
+      "question": 38
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 152,
+    "fields": {
+      "answer": "T.startswith(1)",
+      "is_correct": false,
+      "question": 38
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 153,
+    "fields": {
+      "answer": "Для определения количества элементов последовательности.",
+      "is_correct": false,
+      "question": 39
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 154,
+    "fields": {
+      "answer": "Для одновременного итерирования по самим элементам и их индексам.",
+      "is_correct": true,
+      "question": 39
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 155,
+    "fields": {
+      "answer": "Для сортировки элементов по значениям id.",
+      "is_correct": false,
+      "question": 39
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 156,
+    "fields": {
+      "answer": "My name is Leo and I'm 31.00000 decades old.",
+      "is_correct": false,
+      "question": 40
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 157,
+    "fields": {
+      "answer": "My name is Leo and I'm 3.1 decades old.",
+      "is_correct": false,
+      "question": 40
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 158,
+    "fields": {
+      "answer": "My name is Leo and I'm 3.10000 decades old.",
+      "is_correct": true,
+      "question": 40
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 159,
+    "fields": {
+      "answer": "My name is {name} and I'm {age / 10:.5f} decades old.",
+      "is_correct": false,
+      "question": 40
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 160,
+    "fields": {
+      "answer": "кортеж (tuple)",
+      "is_correct": false,
+      "question": 41
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 161,
+    "fields": {
+      "answer": "список (list)",
+      "is_correct": false,
+      "question": 41
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 162,
+    "fields": {
+      "answer": "множество (set)",
+      "is_correct": true,
+      "question": 41
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 163,
+    "fields": {
+      "answer": "словарь (dict)",
+      "is_correct": false,
+      "question": 41
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 164,
+    "fields": {
+      "answer": "sorted(animals, key='age')",
+      "is_correct": false,
+      "question": 42
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 165,
+    "fields": {
+      "answer": "Ни один вариант не является верным, два словаря нельзя сравнивать друг с другом.",
+      "is_correct": false,
+      "question": 42
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 166,
+    "fields": {
+      "answer": "sorted(animals, key=lambda animal: animal['age'])",
+      "is_correct": true,
+      "question": 42
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 167,
+    "fields": {
+      "answer": "sorted(animals)",
+      "is_correct": false,
+      "question": 42
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 168,
+    "fields": {
+      "answer": "1, 2, 3, {'x': 4, 'y': 5}",
+      "is_correct": false,
+      "question": 43
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 169,
+    "fields": {
+      "answer": "1 (2, 3) {'x': 4, 'y': 5}",
+      "is_correct": true,
+      "question": 43
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 170,
+    "fields": {
+      "answer": "Будет вызвано исключение, после двоеточия обязательно нужно перейти на новую строку.",
+      "is_correct": false,
+      "question": 43
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 171,
+    "fields": {
+      "answer": "1, 2, 3, 'x=4', 'y=5'",
+      "is_correct": false,
+      "question": 43
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 172,
+    "fields": {
+      "answer": "1, 2, 3, 4, 5",
+      "is_correct": false,
+      "question": 43
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 173,
+    "fields": {
+      "answer": "help(x)",
+      "is_correct": false,
+      "question": 44
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 174,
+    "fields": {
+      "answer": "info(x)",
+      "is_correct": false,
+      "question": 44
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 175,
+    "fields": {
+      "answer": "?x",
+      "is_correct": false,
+      "question": 44
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 176,
+    "fields": {
+      "answer": "dir(x)",
+      "is_correct": true,
+      "question": 44
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 177,
+    "fields": {
+      "answer": "A = Y if Z else Y",
+      "is_correct": false,
+      "question": 45
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 178,
+    "fields": {
+      "answer": "A = Y if X else Z",
+      "is_correct": true,
+      "question": 45
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 179,
+    "fields": {
+      "answer": "A = X if Z else Y",
+      "is_correct": false,
+      "question": 45
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 180,
+    "fields": {
+      "answer": "A = X if Y else Z",
+      "is_correct": false,
+      "question": 45
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 181,
+    "fields": {
+      "answer": "a = list(i for i in range(n))",
+      "is_correct": false,
+      "question": 46
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 182,
+    "fields": {
+      "answer": "a = [i for i in range(n)]",
+      "is_correct": false,
+      "question": 46
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 183,
+    "fields": {
+      "answer": "a = (i for i in range(n))",
+      "is_correct": true,
+      "question": 46
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 184,
+    "fields": {
+      "answer": "a = {i for i in range(n)}",
+      "is_correct": false,
+      "question": 46
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 185,
+    "fields": {
+      "answer": "[1] [] [2]",
+      "is_correct": false,
+      "question": 47
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 186,
+    "fields": {
+      "answer": "Будет вызвано исключение: элементов в списке меньше, чем переменных.",
+      "is_correct": false,
+      "question": 47
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 187,
+    "fields": {
+      "answer": "1 0 2",
+      "is_correct": false,
+      "question": 47
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 188,
+    "fields": {
+      "answer": "1 [] 2",
+      "is_correct": true,
+      "question": 47
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 189,
+    "fields": {
+      "answer": "'x'",
+      "is_correct": true,
+      "question": 48
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 190,
+    "fields": {
+      "answer": "Никакой. Нужна предварительная проверка os.path.exists()",
+      "is_correct": false,
+      "question": 48
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 191,
+    "fields": {
+      "answer": "'w'",
+      "is_correct": false,
+      "question": 48
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 192,
+    "fields": {
+      "answer": "'r'",
+      "is_correct": false,
+      "question": 48
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 193,
+    "fields": {
+      "answer": "Для конструкторов классов, как и всё, что связано с __init__",
+      "is_correct": false,
+      "question": 49
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 194,
+    "fields": {
+      "answer": "Список определяет, что экспортировать, когда происходит импорт с помощью from *",
+      "is_correct": true,
+      "question": 49
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 195,
+    "fields": {
+      "answer": "Для перечисления переменных, которые будут скрыты для импортирования.",
+      "is_correct": false,
+      "question": 49
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 196,
+    "fields": {
+      "answer": "Имена аргументов, принимаемых методом __init__.",
+      "is_correct": false,
+      "question": 50
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 197,
+    "fields": {
+      "answer": "Имена принимаемых классом аргументов.",
+      "is_correct": false,
+      "question": 50
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 198,
+    "fields": {
+      "answer": "Имена суперклассов, если класс наследуется от одного или нескольких классов.",
+      "is_correct": true,
+      "question": 50
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 199,
+    "fields": {
+      "answer": "Имена классов, порождаемых данным классом.",
+      "is_correct": false,
+      "question": 50
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 200,
+    "fields": {
+      "answer": "Декорированный метод становится статическим, экземпляр не передаётся.",
+      "is_correct": false,
+      "question": 51
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 201,
+    "fields": {
+      "answer": "Декорированный метод становится методом класса: метод получает класс, а не экземпляр.",
+      "is_correct": false,
+      "question": 51
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 202,
+    "fields": {
+      "answer": "Значение, возвращаемое декорированным методом, вычисляется при извлечении. Можно обратиться к методу экземпляра, как к атрибуту.",
+      "is_correct": true,
+      "question": 51
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 203,
+    "fields": {
+      "answer": "IndexError",
+      "is_correct": false,
+      "question": 52
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 204,
+    "fields": {
+      "answer": "Получено исключение.",
+      "is_correct": true,
+      "question": 52
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 205,
+    "fields": {
+      "answer": "None",
+      "is_correct": false,
+      "question": 52
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 206,
+    "fields": {
+      "answer": "TypeError",
+      "is_correct": false,
+      "question": 52
+    }
+  },
+  {
+    "model": "study.answer",
+    "pk": 207,
+    "fields": {
+      "answer": "Получено исключение. Но в этом нет ничего страшного.",
+      "is_correct": false,
+      "question": 52
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 448,
+    "fields": {
+      "user": 3,
+      "answer": 151
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 449,
+    "fields": {
+      "user": 3,
+      "answer": 153
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 450,
+    "fields": {
+      "user": 3,
+      "answer": 156
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 451,
+    "fields": {
+      "user": 3,
+      "answer": 162
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 452,
+    "fields": {
+      "user": 3,
+      "answer": 164
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 453,
+    "fields": {
+      "user": 3,
+      "answer": 168
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 454,
+    "fields": {
+      "user": 3,
+      "answer": 176
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 455,
+    "fields": {
+      "user": 3,
+      "answer": 180
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 456,
+    "fields": {
+      "user": 3,
+      "answer": 183
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 457,
+    "fields": {
+      "user": 3,
+      "answer": 185
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 458,
+    "fields": {
+      "user": 3,
+      "answer": 190
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 459,
+    "fields": {
+      "user": 3,
+      "answer": 195
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 460,
+    "fields": {
+      "user": 3,
+      "answer": 197
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 461,
+    "fields": {
+      "user": 3,
+      "answer": 200
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 462,
+    "fields": {
+      "user": 3,
+      "answer": 203
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 473,
+    "fields": {
+      "user": 2,
+      "answer": 107
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 474,
+    "fields": {
+      "user": 2,
+      "answer": 112
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 475,
+    "fields": {
+      "user": 2,
+      "answer": 117
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 476,
+    "fields": {
+      "user": 2,
+      "answer": 121
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 477,
+    "fields": {
+      "user": 2,
+      "answer": 125
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 478,
+    "fields": {
+      "user": 2,
+      "answer": 130
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 479,
+    "fields": {
+      "user": 2,
+      "answer": 134
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 480,
+    "fields": {
+      "user": 2,
+      "answer": 139
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 481,
+    "fields": {
+      "user": 2,
+      "answer": 143
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 482,
+    "fields": {
+      "user": 2,
+      "answer": 148
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 483,
+    "fields": {
+      "user": 3,
+      "answer": 106
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 484,
+    "fields": {
+      "user": 3,
+      "answer": 112
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 485,
+    "fields": {
+      "user": 3,
+      "answer": 115
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 486,
+    "fields": {
+      "user": 3,
+      "answer": 120
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 487,
+    "fields": {
+      "user": 3,
+      "answer": 125
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 488,
+    "fields": {
+      "user": 3,
+      "answer": 127
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 489,
+    "fields": {
+      "user": 3,
+      "answer": 133
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 490,
+    "fields": {
+      "user": 3,
+      "answer": 137
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 491,
+    "fields": {
+      "user": 3,
+      "answer": 142
+    }
+  },
+  {
+    "model": "study.useranswer",
+    "pk": 492,
+    "fields": {
+      "user": 3,
+      "answer": 146
+    }
+  }
+]
