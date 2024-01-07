@@ -83,14 +83,17 @@ API Документация
 или http://localhost:8000/redoc/
 
 
+Дополнительно
+-------------
 В проекте предусмотрены json фикстуры в папке fixtures
+Проект протестирован на 83%. Отчет о покрытии тестами в файле coverage_report.txt
 
 
 Docker
 ------
 Для запуска проекта с помощью docker-compose необходимо выполнить команду
 
-- docker-compose up
+- docker-compose up --build -d
 
 Докер:
 
