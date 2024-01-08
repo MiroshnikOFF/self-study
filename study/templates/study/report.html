@@ -4,9 +4,9 @@
     <main>
         <div class="container py-5">
             <h1 class="display-5 fw-bold" style="text-align: center">
-                Вы ответили верно на {{ correct_answers_count }} из {{ answers_count }} вопросов.
+                Вы ответили верно на {{ correct_answers_count }} из {{ questions_count }} вопросов.
             </h1>
-            {% if correct_answers_count == answers_count %}
+            {% if correct_answers_count == questions_count %}
                 <h1 style="color: red; text-align: center">
                     Так держать !!!
                 </h1>
@@ -40,7 +40,7 @@
                 </div>
             {% endfor %}
 
-            {% if correct_answers_count != answers_count %}
+            {% if correct_answers_count != questions_count %}
                 <a class="btn btn-success btn-lg" type="button" style="margin-top: 30px"
                    href="{% url 'study:testing' test_pk 1 %}">Пройти тест снова</a>
             {% endif %}
