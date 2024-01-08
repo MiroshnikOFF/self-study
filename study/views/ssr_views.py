@@ -341,7 +341,7 @@ def report(request, test_pk):
     context_data = {
         'lesson_pk': lesson_pk,
         'test_pk': test_pk,
-        'answers_count': all_questions,
+        'questions_count': all_questions,
         'correct_answers_count': correct_answers_count,
         'questions_with_correct_answer': questions_with_correct_answer,
     }
