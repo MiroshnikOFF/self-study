@@ -168,7 +168,7 @@ class TestCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
 
 
 class TestListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
-    permission_required = 'study.view.test'
+    permission_required = 'study.view_test'
     model = Test
 
     def get_queryset(self):
