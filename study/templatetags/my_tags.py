@@ -19,6 +19,6 @@ def question_path(test_pk: int, questions_pk: list, index: int) -> str:
     если не находит - возвращает путь к изменению теста этого вопроса
     """
     try:
-        return f'/study/question/{questions_pk[index]}/update/'
+        return f'/question/{questions_pk[index]}/update/'
     except IndexError:
-        return f'/study/tests/{test_pk}/update/'
+        return f'/tests/{test_pk}/update/'
