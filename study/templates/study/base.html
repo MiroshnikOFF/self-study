@@ -10,8 +10,10 @@
 </head>
 <body>
 
-<div class="d-none d-md-block">
-    <div class="container">
+
+<div class="container">
+    <div class="d-none d-md-block">
+
         <header>
             <div class="row bg-primary">
                 <div class="col-12">
@@ -68,21 +70,85 @@
                 {% endif %}
             </div>
         </div>
+    </div>
 
-        {% block content %}
-        {% endblock %}
+    <div class="d-md-none">
 
-        <footer class="list-footer-display">
-            <div class="row" style="margin: 30px">
-                <p style="color: grey">API документация</p>
-                <ul>
-                    <li><a href="{% url 'schema-swagger-ui' %}">Swagger</a></li>
-                    <li><a href="{% url 'schema-redoc' %}">Redocly</a></li>
+        <header>
+            <div class="row bg-primary">
+                <h1 class="text-center text-white">Программа самообучения студентов</h1>
+            </div>
+        </header>
+
+        {% if user.is_authenticated %}
+            <div class="dropdown p-3">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    {{ user }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-white bg-primary"
+                           href="{% url 'users:profile' %}">Профиль</a>
+                    </li>
+                    <li><a class="dropdown-item text-primary" href="{% url 'users:logout' %}">Выход</a></li>
+                    {% if not user.is_verified %}
+                        <li><a class="dropdown-item text-white bg-danger" href="{% url 'users:verification' %}">Подтвердите
+                            электронную почту</a></li>
+                    {% endif %}
                 </ul>
             </div>
-        </footer>
+        {% else %}
+            <div class="dropdown mt-4">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    Вход / Регистрация
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-primary" href="{% url 'users:login' %}">Вход</a></li>
+                    <li><a class="dropdown-item text-primary" href="{% url 'users:register' %}">Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+        <div class="row">
+            <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
+        </div>
+        {% if user.is_authenticated %}
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'study:sections' %}">Разделы</a>
+            </div>
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'study:lessons' %}">Уроки</a>
+            </div>
+        {% endif %}
+        {% if user.is_staff %}
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'study:tests' %}">Тесты</a>
+            </div>
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'users:users_list' %}">Пользователи</a>
+            </div>
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'study:statistics' %}">Статистика</a>
+            </div>
+        {% endif %}
     </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="list-footer-display">
+        <div class="row" style="margin: 30px">
+            <p style="color: grey">API документация</p>
+            <ul>
+                <li><a href="{% url 'schema-swagger-ui' %}">Swagger</a></li>
+                <li><a href="{% url 'schema-redoc' %}">Redocly</a></li>
+            </ul>
+        </div>
+    </footer>
+
 </div>
+
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
