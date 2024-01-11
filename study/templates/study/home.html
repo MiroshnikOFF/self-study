@@ -3,7 +3,7 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <div class="d-none d-md-block">
+        <div class="d-md-none">
             <h1 style="text-align: center; color: blue; margin: 30px">
                 Статистика обучения
             </h1>
@@ -47,12 +47,12 @@
             </div>
         </div>
 
-        <div class="d-md-none">
+        <div class="d-none d-md-block">
             <h1 style="text-align: center; color: blue; margin: 30px">
                 Статистика обучения
             </h1>
-            <div class="row" style="margin-top: 50px">
-                <div class="card" style="margin: 30px">
+            <div class="row">
+                <div class="card">
                     <h2 style="text-align: center; margin: 30px">
                         Количество пройденных тестов
                     </h2>
@@ -61,8 +61,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: 50px">
-                <div class="card" style="margin: 30px">
+            <div class="row">
+                <div class="card">
                     <h2 style="text-align: center; margin: 30px">
                         Количество верных ответов
                     </h2>
@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: 50px">
-                <div class="card" style="margin: 30px">
+            <div class="row">
+                <div class="card">
                     <h2 style="text-align: center; margin: 30px">
                         Доля правильных ответов в тестах
                     </h2>
@@ -81,8 +81,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: 50px">
-                <div class="card" style="margin: 30px">
+            <div class="row">
+                <div class="card">
                     <h2 style="text-align: center; margin: 30px">
                         Количество неверных ответов
                     </h2>
