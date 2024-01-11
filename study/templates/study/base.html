@@ -10,76 +10,78 @@
 </head>
 <body>
 
-<div class="container hidden-xs">
-    <header>
-        <div class="row bg-primary">
-            <div class="col-12">
-                <h1 class="text-center text-white">Программа самообучения студентов</h1>
+<div class="d-none d-md-block">
+    <div class="container">
+        <header>
+            <div class="row bg-primary">
+                <div class="col-12">
+                    <h1 class="text-center text-white">Программа самообучения студентов</h1>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="row">
-        <div class="col-9">
-            <div class="p-3">
-                {#            <nav class="ms-5">#}
-                <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
+        <div class="row">
+            <div class="col-9">
+                <div class="p-3">
+                    <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
+                    {% if user.is_authenticated %}
+                        <a class="p-2 btn btn-outline-primary" href="{% url 'study:sections' %}">Разделы</a>
+                        <a class="p-2 btn btn-outline-primary" href="{% url 'study:lessons' %}">Уроки</a>
+                    {% endif %}
+                    {% if user.is_staff %}
+                        <a class="p-2 btn btn-outline-primary" href="{% url 'study:tests' %}">Тесты</a>
+                        <a class="p-2 btn btn-outline-primary" href="{% url 'users:users_list' %}">Пользователи</a>
+                        <a class="p-2 btn btn-outline-primary" href="{% url 'study:statistics' %}">Статистика</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-3">
                 {% if user.is_authenticated %}
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'study:sections' %}">Разделы</a>
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'study:lessons' %}">Уроки</a>
+                    <div class="dropdown p-3">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            {{ user }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white bg-primary"
+                                   href="{% url 'users:profile' %}">Профиль</a>
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="{% url 'users:logout' %}">Выход</a></li>
+                            {% if not user.is_verified %}
+                                <li><a class="dropdown-item text-white bg-danger" href="{% url 'users:verification' %}">Подтвердите
+                                    электронную почту</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% else %}
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Вход / Регистрация
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-primary" href="{% url 'users:login' %}">Вход</a></li>
+                            <li><a class="dropdown-item text-primary" href="{% url 'users:register' %}">Регистрация</a>
+                            </li>
+                        </ul>
+                    </div>
                 {% endif %}
-                {% if user.is_staff %}
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'study:tests' %}">Тесты</a>
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'users:users_list' %}">Пользователи</a>
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'study:statistics' %}">Статистика</a>
-                {% endif %}
-                {#            </nav>#}
             </div>
         </div>
-        <div class="col-3">
-            {% if user.is_authenticated %}
-                <div class="dropdown p-3">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        {{ user }}
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-white bg-primary" href="{% url 'users:profile' %}">Профиль</a>
-                        </li>
-                        <li><a class="dropdown-item text-primary" href="{% url 'users:logout' %}">Выход</a></li>
-                        {% if not user.is_verified %}
-                            <li><a class="dropdown-item text-white bg-danger" href="{% url 'users:verification' %}">Подтвердите
-                                электронную почту</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            {% else %}
-                <div class="dropdown mt-4">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        Вход / Регистрация
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-primary" href="{% url 'users:login' %}">Вход</a></li>
-                        <li><a class="dropdown-item text-primary" href="{% url 'users:register' %}">Регистрация</a></li>
-                    </ul>
-                </div>
-            {% endif %}
-        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer class="list-footer-display">
+            <div class="row" style="margin: 30px">
+                <p style="color: grey">API документация</p>
+                <ul>
+                    <li><a href="{% url 'schema-swagger-ui' %}">Swagger</a></li>
+                    <li><a href="{% url 'schema-redoc' %}">Redocly</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
-
-    {% block content %}
-    {% endblock %}
-
-    <footer class="list-footer-display">
-        <div class="row" style="margin: 30px">
-            <p style="color: grey">API документация</p>
-            <ul>
-                <li><a href="{% url 'schema-swagger-ui' %}">Swagger</a></li>
-                <li><a href="{% url 'schema-redoc' %}">Redocly</a></li>
-            </ul>
-        </div>
-    </footer>
 </div>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
