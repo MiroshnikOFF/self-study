@@ -5,7 +5,7 @@
     <main>
         <div class="container py-4">
             {% if object.avatar %}
-                <img src="{% media_path object.avatar %}" width="800" alt="Упс!">
+                <img src="{% media_path object.avatar %}" width="200" alt="Упс!">
             {% endif %}
             <h1 class="display-5 fw-bold">{{ object.email }}</h1>
             <p class="col-md-8 fs-4">{{ object.last_name }} {{ object.first_name }}</p>
