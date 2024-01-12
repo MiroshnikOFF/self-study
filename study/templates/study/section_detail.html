@@ -59,13 +59,13 @@
             {% endfor %}
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-4">
                 <a class="btn btn-primary" type="button"
                    href="{% url 'study:sections' %}">Закрыть</a>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-4">
                 {% if perms.change.section %}
                     <a class="btn btn-warning" type="button"
@@ -73,7 +73,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-4">
                 {% if perms.delete.section %}
                     <a class="btn btn-danger" type="button"
