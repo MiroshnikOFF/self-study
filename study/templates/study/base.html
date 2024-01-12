@@ -111,24 +111,24 @@
         {% endif %}
 
         {% if user.is_authenticated %}
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
             </div>
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:sections' %}">Разделы</a>
             </div>
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:lessons' %}">Уроки</a>
             </div>
         {% endif %}
         {% if user.is_staff %}
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:tests' %}">Тесты</a>
             </div>
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'users:users_list' %}">Пользователи</a>
             </div>
-            <div class="row">
+            <div class="row mb-2">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:statistics' %}">Статистика</a>
             </div>
         {% endif %}
