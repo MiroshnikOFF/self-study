@@ -38,8 +38,9 @@
                                 {{ form.as_p }}
                                 {% if not forloop.last %}
                                     <a class="btn btn-outline-primary" style="margin-top: 30px"
-                                       href="{% question_path object.pk questions_pk forloop.counter0 %}">Редактировать
-                                        ответы</a>
+                                       href="{% question_path object.pk questions_pk forloop.counter0 %}">
+                                        Редактировать варианты ответа
+                                    </a>
                                     <hr>
                                 {% endif %}
                             {% endfor %}
