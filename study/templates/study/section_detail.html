@@ -60,22 +60,20 @@
         </div>
 
         <div class="row">
-            <div class="col-4">
-                <a class="btn btn-primary" type="button"
-                   href="{% url 'study:sections' %}">Закрыть</a>
-            </div>
-            <div class="col-4">
-                {% if perms.change.section %}
-                    <a class="btn btn-warning" type="button"
-                       href="{% url 'study:section_update' object.pk %}">Редактировать</a>
-                {% endif %}
-            </div>
-            <div class="col-4">
-                {% if perms.delete.section %}
-                    <a class="btn btn-danger" type="button"
-                       href="{% url 'study:section_delete' object.pk %}">Удалить</a>
-                {% endif %}
-            </div>
+            <a class="btn btn-primary" type="button"
+               href="{% url 'study:sections' %}">Закрыть</a>
+        </div>
+        <div class="row">
+            {% if perms.change.section %}
+                <a class="btn btn-warning" type="button"
+                   href="{% url 'study:section_update' object.pk %}">Редактировать</a>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if perms.delete.section %}
+                <a class="btn btn-danger" type="button"
+                   href="{% url 'study:section_delete' object.pk %}">Удалить</a>
+            {% endif %}
         </div>
 
     </div>
