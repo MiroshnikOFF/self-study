@@ -4,7 +4,9 @@
 {% block content %}
     <div class="row">
         <div class="container" style="margin: 30px">
-            <img src="{% media_path object.preview %}" width="800" alt="Упс!">
+{#            <img src="{% media_path object.preview %}" width="800" alt="Упс!">#}
+            <img src="{% media_path object.preview %}" class="img-responsive hidden-xs">
+{#            <img src="{% media_path object.preview %}" class="img-responsive visible-xs-block">#}
         </div>
     </div>
     <div class="row">
