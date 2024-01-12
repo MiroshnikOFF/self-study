@@ -109,10 +109,11 @@
                 </ul>
             </div>
         {% endif %}
-        <div class="row">
-            <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
-        </div>
+
         {% if user.is_authenticated %}
+            <div class="row">
+                <a class="p-2 btn btn-outline-primary" href="{% url 'study:home' %}">Главная</a>
+            </div>
             <div class="row">
                 <a class="p-2 btn btn-outline-primary" href="{% url 'study:sections' %}">Разделы</a>
             </div>
