@@ -49,6 +49,17 @@
             <h1 class="display-5 fw-bold">{{ object.name }}</h1>
             <p class="fs-4">{{ object.description }}</p>
 
+        </div>
+        <div class="row">
+            <h1>Уроки</h1>
+            {% for lesson in lessons %}
+                <li>
+                    <a href="{% url 'study:lesson' lesson.pk %}">{{ lesson.name }}</a>
+                </li>
+            {% endfor %}
+        </div>
+
+        <div class="row">
             <a class="btn btn-primary" type="button" style="margin-top: 30px"
                href="{% url 'study:sections' %}">Закрыть</a>
             {% if perms.change.section %}
@@ -60,14 +71,7 @@
                    href="{% url 'study:section_delete' object.pk %}">Удалить</a>
             {% endif %}
         </div>
-        <div class="row">
-            <h1>Уроки</h1>
-            {% for lesson in lessons %}
-                <li>
-                    <a href="{% url 'study:lesson' lesson.pk %}">{{ lesson.name }}</a>
-                </li>
-            {% endfor %}
-        </div>
+
     </div>
 
 {% endblock %}
