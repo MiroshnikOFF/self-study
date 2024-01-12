@@ -49,14 +49,14 @@
             <h1 class="display-5 fw-bold">{{ object.name }}</h1>
             <p class="fs-4">{{ object.description }}</p>
 
-            <a class="btn btn-primary btn-lg" type="button" style="margin-top: 30px"
+            <a class="btn btn-primary" type="button" style="margin-top: 30px"
                href="{% url 'study:sections' %}">Закрыть</a>
             {% if perms.change.section %}
-                <a class="btn btn-warning btn-lg" type="button" style="margin-top: 30px"
+                <a class="btn btn-warning" type="button" style="margin-top: 30px"
                    href="{% url 'study:section_update' object.pk %}">Редактировать</a>
             {% endif %}
             {% if perms.delete.section %}
-                <a class="btn btn-danger btn-lg" type="button" style="margin-top: 30px"
+                <a class="btn btn-danger" type="button" style="margin-top: 30px"
                    href="{% url 'study:section_delete' object.pk %}">Удалить</a>
             {% endif %}
         </div>
