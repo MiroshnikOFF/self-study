@@ -13,7 +13,7 @@ class LessonShortSerializer(serializers.ModelSerializer):
 class TestShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = Test
-        fields = ('pk', 'name',)
+        fields = ('id', 'name',)
 
 
 class QuestionShortSerializer(serializers.ModelSerializer):
